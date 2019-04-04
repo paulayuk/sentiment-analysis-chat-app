@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+    <html>
+       <head>
+
+        <link rel="stylesheet" href="/css/styles.css">
+            
+        <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+        </script>
+        
+        <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.1.220/styles/kendo.common.min.css">
+        <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.1.220/styles/kendo.rtl.min.css">
+        <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.1.220/styles/kendo.default.min.css">
+        <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.1.220/styles/kendo.mobile.all.min.css">
+        <script src="https://kendo.cdn.telerik.com/2019.1.220/js/kendo.all.min.js"> </script>
+
+         <title>Chat App</title>
+
+       </head>
+ 
+	<body>
+	      <ul id="messages"></ul>
+        <form action="">
+          <input id="m" autocomplete="off" /><button>Send</button>
+        </form>
+        <span id="popupNotification"></span>
+	     <script src="/js/chat.js"></script>
+       <script src="/socket.io/socket.io.js"></script>
+	    <script>
+	      let socket = io('http://localhost');
+	      socket.on('connect', function(){});
+	      socket.on('event', function(data){});
+	      socket.on('disconnect', function(){});
+	    </script>   
+	</body> 
+</html>
